@@ -1,0 +1,102 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "ArrayModificaresPorAtributo",
+"language": "GDScript",
+"path": "res://util/array_modificadores.gd"
+}, {
+"base": "Reference",
+"class": "Atributo",
+"language": "GDScript",
+"path": "res://combate/model/atributo.gd"
+}, {
+"base": "",
+"class": "AtributoNulo",
+"language": "GDScript",
+"path": "res://combate/model/atributo_nulo.gd"
+}, {
+"base": "",
+"class": "Buff",
+"language": "GDScript",
+"path": "res://combate/model/buff.gd"
+}, {
+"base": "",
+"class": "BuffNulo",
+"language": "GDScript",
+"path": "res://combate/model/buff_nulo.gd"
+}, {
+"base": "",
+"class": "Debuff",
+"language": "GDScript",
+"path": "res://combate/model/debuff.gd"
+}, {
+"base": "",
+"class": "DebuffNulo",
+"language": "GDScript",
+"path": "res://combate/model/debuff_nulo.gd"
+}, {
+"base": "Reference",
+"class": "Modificador",
+"language": "GDScript",
+"path": "res://combate/model/modificador.gd"
+}, {
+"base": "Reference",
+"class": "UnidadAlgoritmoAtaque",
+"language": "GDScript",
+"path": "res://combate/model/unidad_algoritmo_ataque.gd"
+}, {
+"base": "",
+"class": "UnidadAlgoritmoAtaqueNulo",
+"language": "GDScript",
+"path": "res://combate/model/unidad_algoritmo_ataque_nulo.gd"
+}, {
+"base": "Reference",
+"class": "Valor",
+"language": "GDScript",
+"path": "res://combate/model/valor.gd"
+}, {
+"base": "",
+"class": "ValorNulo",
+"language": "GDScript",
+"path": "res://combate/model/valor_nulo.gd"
+} ]
+_global_script_class_icons={
+"ArrayModificaresPorAtributo": "",
+"Atributo": "",
+"AtributoNulo": "",
+"Buff": "",
+"BuffNulo": "",
+"Debuff": "",
+"DebuffNulo": "",
+"Modificador": "",
+"UnidadAlgoritmoAtaque": "",
+"UnidadAlgoritmoAtaqueNulo": "",
+"Valor": "",
+"ValorNulo": ""
+}
+
+[application]
+
+config/name="POC_Ataque"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/gut/plugin.cfg" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
