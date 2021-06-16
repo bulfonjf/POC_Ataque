@@ -25,6 +25,14 @@ func test_obtner_unidad_modificada_debe_retornar_la_unidad_con_los_modificadores
 			unidad_esperada = UnidadAlgoritmoAtaque.new([get_atributo_vida(80)])
 		},
 		{
+			test_nombre = "unidad con vida 100 - aplicar buff de 7 - debe retornar unidad con vida 93",
+			modificadores =  [
+				Buff.new(Valor.new(7), get_atributo_vida(100))
+			],
+			unidad =  UnidadAlgoritmoAtaque.new([get_atributo_vida(100)]),
+			unidad_esperada = UnidadAlgoritmoAtaque.new([get_atributo_vida(107)])
+		},
+		{
 			test_nombre = "unidad con vida 100 - aplicar debuff de 7 - debe retornar unidad con vida 93",
 			modificadores =  [
 				Debuff.new(Valor.new(7), get_atributo_vida(100))
