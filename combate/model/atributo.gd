@@ -11,7 +11,7 @@ func _init(_nombre : String, _valor : Valor, _valor_maximo : int, _valor_minimo 
 	valor_maximo = _valor_maximo
 	valor_minimo = _valor_minimo
 
-func _to_string():
+func _to_string() -> String:
 	return "nombre %s" % nombre + " cantidad %d" % valor.cantidad
 
 func _eq(other : Atributo):
