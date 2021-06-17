@@ -29,10 +29,12 @@ func _eq(other : UnidadAlgoritmoAtaque) -> bool:
 
 	return result
 
-func _to_string():
-	print("printeo de unidad")
+func _to_string() -> String:
+	var desc = "unidad: \n"
 	for atributo in self.atributos:
-		print(atributo)
+		desc += " " + atributo._to_string() + "\n"
+	
+	return desc
 
 func clone_atributes() -> Array:
 	var nuevos_atributos = []
