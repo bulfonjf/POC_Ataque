@@ -7,5 +7,7 @@ func _init(_valor : Valor, _atributo : Atributo):
     valor = _valor
     atributo = _atributo
 
-func _to_string():
+func _to_string() -> String:
     return "atributo: " + atributo.to_string() + " valor: " + valor.to_string()
+
+    
