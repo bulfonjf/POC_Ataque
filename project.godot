@@ -10,11 +10,6 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Reference",
-"class": "ArrayModificaresPorAtributo",
-"language": "GDScript",
-"path": "res://util/array_modificadores.gd"
-}, {
-"base": "Reference",
 "class": "Atributo",
 "language": "GDScript",
 "path": "res://combate/model/atributo.gd"
@@ -70,7 +65,6 @@ _global_script_classes=[ {
 "path": "res://combate/model/valor_nulo.gd"
 } ]
 _global_script_class_icons={
-"ArrayModificaresPorAtributo": "",
 "Atributo": "",
 "AtributoNulo": "",
 "Buff": "",
@@ -88,6 +82,10 @@ _global_script_class_icons={
 
 config/name="POC_Ataque"
 config/icon="res://icon.png"
+
+[autoload]
+
+ArrayModificadores="*res://util/array_modificadores.gd"
 
 [editor_plugins]
 

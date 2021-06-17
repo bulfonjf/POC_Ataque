@@ -9,12 +9,12 @@ func obtener_unidad_con_modificadores_aplicados(modificadores : Array, unidad : 
 	var debuff_por_atributo = {}
 
 	# TODO centralizar esto en un helper: buff_por_atributo, debuff_por_atributo = ArrayModificares.GroupByAtributo(modificadores)
+	var filtrar_por_buff = funcref(ArrayModificadores, 'filtrar_por_Buff')
+	var filtrar_por_debuff = funcref(ArrayModificadores, 'filtrar_por_Debuff')
+	var acumular_por_atributo = funcref(self, 'acumular_modificadores_por_atributo')
 
-	for m in modificadores:
-		if m is Buff:
-			acumular_modificadores_por_atributo(buff_por_atributo, m)
-		elif m is Debuff:
-			acumular_modificadores_por_atributo(debuff_por_atributo, m)
+	buff_por_atributo = ArrayModificadores.agrupar_modificadores(modificadores, filtrar_por_buff, acumular_por_atributo)
+	debuff_por_atributo = ArrayModificadores.agrupar_modificadores(modificadores, filtrar_por_debuff, acumular_por_atributo) 
 			
 	aplicar_modificadores(unidad_a_modificar, buff_por_atributo, debuff_por_atributo)
 		
